@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg,rgb(251, 87, 87),rgb(93, 95, 249));
+}
+center{
+    margin-top: 10px;
+    color:white;
+    padding: 10px;
+    margin-top: 0;
+    background-color: black;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    margin: 70px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    background-color: white;
+}
+.todo-app h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gainsboro;
+    border-radius: 40px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input{
+    flex: 1;
+    outline: 0;
+    border: 0;
+    padding: 20px 4px;
+    background: transparent;
+    font-weight: 500;
+    font-size: 17px;
+}
+.row button{
+    outline: 0;
+    border: 0;
+    padding: 20px 10px;
+    color: white;
+    background: transparent;
+    background-color: orangered;
+    border-radius: 40px;
+    padding: 20px 40px;
+    font-size: 23px;
+    cursor: pointer;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 15px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(./images/unchecked.png);
+    background-size: cover ;
+    background-position: center;
+    top: 11px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background: url(./images/checked.png);
+    background-size: cover ;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: #edeef0;
+}
+@media (max-width: 425px) {
+    .row input{
+        padding: 10px 2px;
+        font-weight: 200;
+        font-size: 13px;
+    }
+    .row button{
+        padding: 15px 20px;
+        font-size: 13px;
+    }
+    ul li{
+        font-size: 15px;
+    }
+}
